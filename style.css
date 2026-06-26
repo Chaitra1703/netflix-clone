@@ -1,0 +1,299 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#141414;
+    color:white;
+}
+
+/* Navbar */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(8px);
+}
+
+.logo{
+    color:#e50914;
+    font-size:32px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e50914;
+}
+
+.signin-btn{
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.75)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:700px;
+    margin-left:80px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.sub-text{
+    color:#d1d5db;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.get-started,
+.learn-more{
+
+    padding:14px 28px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.get-started{
+    background:#e50914;
+    color:white;
+}
+
+.learn-more{
+    background:white;
+    color:black;
+}
+
+/* Content Sections */
+
+.content-section{
+    padding:40px 60px;
+}
+
+.content-section h2{
+    margin-bottom:20px;
+}
+
+.movie-row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.movie-row::-webkit-scrollbar{
+    height:8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb{
+    background:#444;
+    border-radius:10px;
+}
+
+.movie-card{
+    min-width:220px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.movie-card img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+}
+
+.movie-card:hover{
+    transform:scale(1.08);
+}
+
+/* FAQ Section */
+
+.faq-section{
+    padding:60px;
+}
+
+.faq-section h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.faq-item{
+    margin-bottom:15px;
+}
+
+.faq-question{
+
+    width:100%;
+    text-align:left;
+
+    background:#2d2d2d;
+    color:white;
+
+    border:none;
+
+    padding:20px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.faq-answer{
+
+    background:#444;
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height .3s ease;
+
+    padding:0 20px;
+}
+
+.faq-answer.show{
+    max-height:200px;
+    padding:20px;
+}
+
+/* Footer */
+
+footer{
+    background:#0b0b0b;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.footer-links{
+    margin:20px 0;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#aaa;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .hero-content{
+        margin:0 25px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .content-section{
+        padding:30px 20px;
+    }
+
+    .faq-section{
+        padding:40px 20px;
+    }
+}
+
+@media(max-width:600px){
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .get-started,
+    .learn-more{
+        width:100%;
+    }
+
+    .movie-card{
+        min-width:180px;
+    }
+}
