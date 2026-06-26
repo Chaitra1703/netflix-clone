@@ -1,0 +1,120 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
+body{
+  background:#111;
+  color:#fff;
+}
+.navbar{
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 6%;
+  background:rgba(0,0,0,.85);
+  z-index:1000;
+}
+.logo{font-size:2rem;font-weight:700;color:#e50914;}
+nav ul{display:flex;list-style:none;gap:24px;}
+nav a{color:#fff;text-decoration:none;transition:.3s;}
+nav a:hover{color:#e50914;}
+.btn{
+  background:#e50914;color:#fff;border:none;
+  padding:10px 18px;border-radius:5px;cursor:pointer;
+}
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+             url("images/hero-bg.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 6%;
+}
+.hero-content{max-width:650px;}
+.hero-content h1{font-size:3.5rem;margin-bottom:20px;}
+.hero-content p{font-size:1.15rem;color:#ddd;margin-bottom:25px;}
+.watch-btn{
+  background:#e50914;color:#fff;border:none;
+  padding:14px 28px;border-radius:6px;
+  cursor:pointer;font-size:1rem;
+}
+.section{padding:70px 6%;}
+.section h2{margin-bottom:20px;}
+.movie-row{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding-bottom:10px;
+}
+.movie-row::-webkit-scrollbar{height:8px;}
+.movie-row::-webkit-scrollbar-thumb{
+  background:#555;border-radius:10px;
+}
+.card{
+  min-width:210px;
+  transition:.3s;
+}
+.card img{
+  width:100%;
+  display:block;
+  border-radius:10px;
+}
+.card:hover{
+  transform:scale(1.06);
+}
+.faq{
+  padding:70px 6%;
+}
+.faq h2{text-align:center;margin-bottom:30px;}
+.faq-item{margin-bottom:15px;}
+.question{
+  width:100%;
+  padding:18px;
+  background:#2c2c2c;
+  color:#fff;
+  border:none;
+  text-align:left;
+  cursor:pointer;
+  font-size:1rem;
+}
+.answer{
+  max-height:0;
+  overflow:hidden;
+  background:#444;
+  transition:max-height .3s ease,padding .3s ease;
+  padding:0 18px;
+}
+.answer.show{
+  max-height:200px;
+  padding:18px;
+}
+footer{
+  text-align:center;
+  padding:35px;
+  background:#000;
+  color:#bbb;
+}
+@media(max-width:768px){
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+  nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .hero-content h1{
+    font-size:2.4rem;
+  }
+  .section,.faq{
+    padding:50px 5%;
+  }
+  .card{
+    min-width:170px;
+  }
+}
