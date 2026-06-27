@@ -6,7 +6,7 @@ Netflix UI Clone is a responsive front-end web application developed using **HTM
 
 
 ##  Live website link 
-https://chaitra1703.github.io/netflix-clone/
+https://reliable-genie-fca4cd.netlify.app/
 
 ##  Repository
 
